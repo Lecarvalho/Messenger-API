@@ -2,6 +2,7 @@
 
 ex: 
 
+```json
 {
   "AppName": "Your App Name",
   "Logging": {
@@ -17,3 +18,4 @@ ex:
     }
   }
 }
+```
