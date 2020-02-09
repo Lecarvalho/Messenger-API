@@ -1,0 +1,11 @@
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/bin/Release/netstandard2.0/MessagerApi.Services.deps.json
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/bin/Release/netstandard2.0/MessagerApi.Services.dll
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/bin/Release/netstandard2.0/MessagerApi.Services.pdb
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/bin/Release/netstandard2.0/MessagerApi.Business.dll
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/bin/Release/netstandard2.0/MessagerApi.Business.pdb
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/obj/Release/netstandard2.0/MessagerApi.Services.csprojAssemblyReference.cache
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/obj/Release/netstandard2.0/MessagerApi.Services.AssemblyInfoInputs.cache
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/obj/Release/netstandard2.0/MessagerApi.Services.AssemblyInfo.cs
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/obj/Release/netstandard2.0/MessagerApi.Services.csproj.CopyComplete
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/obj/Release/netstandard2.0/MessagerApi.Services.dll
+/home/leandro/development/projects/MessegerApi/MessagerApi.Services/obj/Release/netstandard2.0/MessagerApi.Services.pdb
