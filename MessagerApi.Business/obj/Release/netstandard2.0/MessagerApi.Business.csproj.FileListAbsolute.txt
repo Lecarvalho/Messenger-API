@@ -1,8 +1,0 @@
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/bin/Release/netstandard2.0/MessagerApi.Business.deps.json
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/bin/Release/netstandard2.0/MessagerApi.Business.dll
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/bin/Release/netstandard2.0/MessagerApi.Business.pdb
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/obj/Release/netstandard2.0/MessagerApi.Business.csprojAssemblyReference.cache
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/obj/Release/netstandard2.0/MessagerApi.Business.AssemblyInfoInputs.cache
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/obj/Release/netstandard2.0/MessagerApi.Business.AssemblyInfo.cs
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/obj/Release/netstandard2.0/MessagerApi.Business.dll
-/home/leandro/development/projects/MessegerApi/MessagerApi.Business/obj/Release/netstandard2.0/MessagerApi.Business.pdb
