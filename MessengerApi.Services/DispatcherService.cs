@@ -10,13 +10,17 @@ namespace MessengerApi.Services
     public class DispatcherService
     {
         List<DispatcherBase> _dispatchers;
-        public DispatcherService(IOptions<DispatcherConfig> dispatcherConfigOptions)
-        {   
+        public DispatcherService(IOptions<DispatchOptions> dispatcherConfigOptions)
+        {
             _dispatchers = new List<DispatcherBase>();
             var dispatcherConfig = dispatcherConfigOptions.Value;
+
             if (dispatcherConfig.Slack != null)
                 _dispatchers.Add(new SlackDispatcher(dispatcherConfig.Slack));
-            
+
+            if (dispatcherConfig.Email != null)
+                _dispatchers.Add(new EmailDispatcher(dispatcherConfig.Email));
+
         }
 
 

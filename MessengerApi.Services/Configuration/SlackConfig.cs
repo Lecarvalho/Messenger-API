@@ -1,6 +1,6 @@
 namespace MessengerApi.Services.Configuration
 {
-    public class SlackDispatcherConfig
+    public class SlackConfig : ConfigBase
     {
         public string Webhook { get; set; }
     }

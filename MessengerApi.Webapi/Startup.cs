@@ -27,7 +27,7 @@ namespace MessengerApi.Webapi
         {
             services.Configure<FirestoreConfig>(x => Configuration.GetSection("Firebase:Firstore").Bind(x));
 
-            services.Configure<DispatcherConfig>(x => Configuration.GetSection("Dispatchers").Bind(x));
+            services.Configure<DispatchOptions>(x => Configuration.GetSection("Dispatchers").Bind(x));
             services.AddScoped<DispatcherService>();
 
             services.AddScoped<DataContext>();

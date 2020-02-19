@@ -15,6 +15,14 @@ ex:
   "Dispatchers":{
     "Slack": {
       "Webhook" : "https://hooks.slack.com/services/this_is_just_a_simple_url"
+    },
+    "Email": {
+      "To": "email@email.com",
+      "From": "email@email.com",
+      "Username": "username",
+      "Password": "password",
+      "Smtp": "smtp.email.com",
+      "Port": 587
     }
   }
 }

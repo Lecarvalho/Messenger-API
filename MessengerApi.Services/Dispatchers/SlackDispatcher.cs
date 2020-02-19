@@ -10,21 +10,22 @@ namespace MessengerApi.Services.Dispatchers
 {
     public class SlackDispatcher : DispatcherBase
     {
-        SlackDispatcherConfig _dispatcherConfig;
-        NetworkProvider _networkProvider;
-        public SlackDispatcher(SlackDispatcherConfig dispatcherConfig)
+        private NetworkProvider _networkProvider;
+        private SlackConfig _config;
+
+        public SlackDispatcher(SlackConfig config)
         {
-            _dispatcherConfig = dispatcherConfig;
             _networkProvider = new NetworkProvider();
+            _config = config;
         }
 
         public override async Task Send(MessageModel message)
         {
             var jsonString = PrepareJson(message);
-            await _networkProvider.RequestPost(_dispatcherConfig.Webhook, jsonString);
+            await _networkProvider.RequestPost(_config.Webhook, jsonString);
         }
 
-        protected override string PrepareJson(MessageModel message)
+        protected string PrepareJson(MessageModel message)
         {
             return new SlackStruct(message.Content, message.User?.Name).ToJson();
         }
