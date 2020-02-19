@@ -27,3 +27,5 @@ ex:
   }
 }
 ```
+
+If you want to use Gmail as a sender, just go to https://myaccount.google.com/u/5/lesssecureapps?pli=1&pageId=none and allow less secure apps to send mail.
