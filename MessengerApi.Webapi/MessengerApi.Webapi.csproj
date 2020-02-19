@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\MessengerApi.Business\MessengerApi.Business.csproj" />
+    <ProjectReference Include="..\MessengerApi.Services\MessengerApi.Services.csproj" />
+    <ProjectReference Include="..\MessengerApi.DAL\MessengerApi.DAL.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+
+</Project>

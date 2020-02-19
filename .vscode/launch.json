@@ -9,9 +9,9 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/MessagerApi.Webapi/bin/Debug/netcoreapp3.1/MessagerApi.Webapi.dll",
+            "program": "${workspaceFolder}/MessengerApi.Webapi/bin/Debug/netcoreapp3.1/MessengerApi.Webapi.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/MessagerApi.Webapi",
+            "cwd": "${workspaceFolder}/MessengerApi.Webapi",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
