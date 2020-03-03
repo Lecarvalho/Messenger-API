@@ -3,12 +3,13 @@ using Newtonsoft.Json;
 
 public struct SlackStruct
 {
-    public SlackStruct(string content, string user)
+    public SlackStruct(string content, string user, string token)
     {
         blocks = new List<IBloc>()
         {
             new Section(content),
-            new Context(user)
+            new Context("User", user),
+            new Context("Token", token)
         };
     }
     public List<IBloc> blocks { get; set; }
@@ -37,11 +38,11 @@ public struct Section : IBloc
 
 public struct Context : IBloc
 {
-    public Context(string user)
+    public Context(string type, string value)
     {
         elements = new List<Text>
         {
-            new Text("*User:* " + user)
+            new Text($"*{type}:* {value}")
         };
     }
     

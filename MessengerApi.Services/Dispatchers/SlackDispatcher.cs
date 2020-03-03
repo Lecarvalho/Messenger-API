@@ -27,7 +27,7 @@ namespace MessengerApi.Services.Dispatchers
 
         protected string PrepareJson(MessageModel message)
         {
-            return new SlackStruct(message.Content, message.User?.Name).ToJson();
+            return new SlackStruct(message.Content, message.User.Name, message.User.Token).ToJson();
         }
     }
 }
