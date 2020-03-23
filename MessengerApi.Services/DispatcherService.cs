@@ -10,8 +10,11 @@ namespace MessengerApi.Services
     public class DispatcherService
     {
         List<DispatcherBase> _dispatchers;
-        public DispatcherService(IOptions<DispatchOptions> dispatcherConfigOptions)
+        string appName;
+        public DispatcherService(IOptions<DispatchOptions> dispatcherConfigOptions, IOptions<AppConfig> appConfigOptions)
         {
+            appName = appConfigOptions.Value.AppName;
+
             _dispatchers = new List<DispatcherBase>();
             var dispatcherConfig = dispatcherConfigOptions.Value;
 
@@ -28,7 +31,7 @@ namespace MessengerApi.Services
         {
             foreach (var dispatcher in _dispatchers)
             {
-                await dispatcher.Send(message);
+                await dispatcher.Send(message, appName);
             }
         }
     }

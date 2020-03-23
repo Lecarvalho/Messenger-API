@@ -15,7 +15,7 @@ namespace MessengerApi.Services.Dispatchers
             _config = config;
         }
 
-        public override async Task Send(MessageModel message)
+        public override async Task Send(MessageModel message, string appName)
         {
             try
             {
@@ -26,8 +26,9 @@ namespace MessengerApi.Services.Dispatchers
                 mail.To.Add(_config.To);
                 mail.Subject = "Message from Messenger-API";
                 mail.Body = message.Content;
-                mail.Body += "<br /><br />" + message.Date.ToShortDateString();
-                mail.Body += "<br />" + message.User?.Name;
+                mail.Body += "<p>" + message.Date.ToShortDateString();
+                mail.Body += "<br />" + message.User?.Name + "</p>";
+                mail.Body += "<p>" + appName + "</p>";
                 mail.IsBodyHtml = true;
                 
                 if (message.Image != null)

@@ -7,6 +7,6 @@ namespace MessengerApi.Services.Dispatchers
 {
     public abstract class DispatcherBase
     {
-        public abstract Task Send(MessageModel message);
+        public abstract Task Send(MessageModel message, string appName);
     }
 }

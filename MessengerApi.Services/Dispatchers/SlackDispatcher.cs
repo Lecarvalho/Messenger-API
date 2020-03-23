@@ -19,7 +19,7 @@ namespace MessengerApi.Services.Dispatchers
             _config = config;
         }
 
-        public override async Task Send(MessageModel message)
+        public override async Task Send(MessageModel message, string appName)
         {
             var jsonString = PrepareJson(message);
             await _networkProvider.RequestPost(_config.Webhook, jsonString);

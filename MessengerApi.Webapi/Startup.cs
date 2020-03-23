@@ -25,6 +25,8 @@ namespace MessengerApi.Webapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.Configure<AppConfig>(x => x.AppName = Configuration.GetValue<string>("AppName"));
+
             services.Configure<FirestoreConfig>(x => Configuration.GetSection("Firebase:Firstore").Bind(x));
 
             services.Configure<DispatchOptions>(x => Configuration.GetSection("Dispatchers").Bind(x));
