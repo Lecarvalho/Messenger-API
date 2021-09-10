@@ -5,10 +5,9 @@ services:
     image: registry.digitalocean.com/vingtaine/vingtaine-messenger-api:latest
     ports:
       - 80
-      - 443
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=https://+:443;http://+:80
+      - ASPNETCORE_URLS=http://+:80
       # - ASPNETCORE_Kestrel__Certificates__Default__Password=ccibc-ulocal
       # - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/ccibc.ulocal.co.pfx
     # volumes:
