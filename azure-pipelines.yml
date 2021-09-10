@@ -20,13 +20,10 @@ steps:
       runOptions: 'inline'
       inline: |
         echo Login to registry
-        sudo docker login $(RegistryURL) -u $(REGISTRYUSER) -p $(REGISTRYPASS)
+        sudo docker login $(RegistryURL) -u $(RegistryUser) -p $(RegistryPassword)
         echo ------
         echo Open Workspace
         cd /Workspace
         sudo docker-compose pull && docker-compose up -d --remove-orphans
       failOnStdErr: false
       readyTimeout: '20000'
-    env: 
-      REGISTRYUSER: $(RegistryUser)
-      REGISTRYPASS: $(RegistryPassword)
