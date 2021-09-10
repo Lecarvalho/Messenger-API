@@ -4,7 +4,7 @@ services:
   webapi:
     image: registry.digitalocean.com/vingtaine/vingtaine-messenger-api:latest
     ports:
-      - 80
+      - 80:80
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:80
