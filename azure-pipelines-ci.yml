@@ -8,6 +8,5 @@ variables:
 - group: DigitalOceanRegistry
 
 steps:
-- script: sh build-and-push-image-to-cr.sh $(RegistryURL) $(RegistryUser) $(RegistryPassword)
+- script: sh scripts/build-and-push-image-to-cr.sh $(RegistryURL) $(RegistryUser) $(RegistryPassword)
   displayName: 'Build and push image to registry'
-  workingDirectory: scripts
