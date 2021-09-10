@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/MessengerApi.Webapi/bin/Debug/netcoreapp3.1/MessengerApi.Webapi.dll",
+            "program": "${workspaceFolder}/MessengerApi.Webapi/bin/Debug/net5.0/MessengerApi.Webapi.dll",
             "args": [],
             "cwd": "${workspaceFolder}/MessengerApi.Webapi",
             "stopAtEntry": false,
