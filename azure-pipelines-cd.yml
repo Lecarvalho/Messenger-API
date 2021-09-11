@@ -24,6 +24,6 @@ steps:
         echo ------
         echo Open Workspace
         cd /Workspace
-        sudo docker-compose down && docker-compose pull && docker-compose up -d --remove-orphans
+        sudo docker-compose pull && docker-compose up -d --remove-orphans
       failOnStdErr: false
       readyTimeout: '20000'
