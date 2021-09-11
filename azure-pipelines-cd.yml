@@ -17,8 +17,8 @@ steps:
       runOptions: 'inline'
       inline: |
         cd /Workspace
-        echo docker-compose stop
-        sudo docker-compose stop
+        echo docker-compose down
+        sudo docker-compose down
         echo docker-login
         sudo docker login $(RegistryURL) -u $(RegistryUser) -p $(RegistryPassword)
         echo docker-pull & up -d
