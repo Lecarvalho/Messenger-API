@@ -19,11 +19,12 @@ steps:
       sshEndpoint: 'pleyce.app'
       runOptions: 'inline'
       inline: |
-        echo Login to registry
+        echo docker-compose stop
+        sudo docker-compose stop
+        echo docker-login
         sudo docker login $(RegistryURL) -u $(RegistryUser) -p $(RegistryPassword)
-        echo ------
-        echo Open Workspace
-        cd /Workspace
+        echo docker-pull & up -d
         sudo docker-compose pull && docker-compose up -d --remove-orphans
       failOnStdErr: false
       readyTimeout: '20000'
+    workingDirectory: /Workspace
