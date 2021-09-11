@@ -12,8 +12,8 @@ steps:
 - script: |
     echo Replace variables on appsettings 
     cd MessengerApi.Webapi
-    slackwebhook = $(SLACKWEBHOOK)
-    sed "s/__SLACKWEBHOOK__/$slackwebhook/g" appsettings.json
+    slackwebhook=$(SLACKWEBHOOK)
+    sed -i "s/__SLACKWEBHOOK__/$slackwebhook/" appsettings.json
     echo Build and push image to registry
     cd ..
     sh scripts/build-and-push-image-to-cr.sh $(RegistryURL) $(RegistryUser) $(RegistryPassword)
