@@ -10,5 +10,8 @@ steps:
     echo Replace variables on appsettings 
     awk -i inplace -v cuv1="__SLACKWEBHOOK__" -v cuv2="$(SLACKWEBHOOK)" '{gsub(cuv1,cuv2); print;}' "MessengerApi.Webapi/appsettings.json"
     echo Build and push image to registry
-    sh scripts/build-and-push-image-to-cr.sh $(RegistryURL) $(RegistryUser) $(RegistryPassword) $(ImageName)
+    sh scripts/build-and-push-image-to-cr.sh $(RegistryURL) %REGISTRY_USER% %REGISTRY_PASSWORD% $(ImageName)
   displayName: 'Replace variables, build and push image to registry'
+  env: 
+    REGISTRY_USER: $(RegistryUser)
+    REGISTRY_PASSWORD: $(RegistryPassword)
