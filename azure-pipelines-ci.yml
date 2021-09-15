@@ -1,0 +1,12 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+
+- script: sh scripts/build-and-push-image-to-cr.sh $REGISTRY_PASSWORD
+  displayName: 'Build and push image to registry'
+  env: 
+    REGISTRY_PASSWORD: $(RegistryPassword)
