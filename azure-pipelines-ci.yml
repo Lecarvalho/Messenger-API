@@ -6,8 +6,7 @@ pool:
 
 steps:
 
-- script: sh scripts/build-and-push-image-to-cr.sh $(RegistryURL) $REGISTRY_USER $REGISTRY_PASSWORD $(ImageName)
+- script: sh scripts/build-and-push-image-to-cr.sh $REGISTRY_PASSWORD
   displayName: 'Build and push image to registry'
   env: 
-    REGISTRY_USER: $(RegistryUser)
     REGISTRY_PASSWORD: $(RegistryPassword)
